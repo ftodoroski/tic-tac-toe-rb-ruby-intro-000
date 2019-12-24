@@ -38,4 +38,6 @@ def turn(board)
   user_input = gets.strip
   converted = input_to_index(user_input)
 
+  until valid_move?(board, converted)
+
 end
