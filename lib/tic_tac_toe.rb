@@ -84,18 +84,7 @@ def draw?(board)
     end
 end
 
-def over?(board)
-    if won?(board) || full?(board) || draw?(board)
-        return true
-    else
-        false
-    end
-end
-
 def winner(board)
-    return nil if draw?(board)
+    draw?(board) ? nil : board[won?(board)[0]]
 
-
-    winn_combo = won?(board)
-    board[winn_combo[0]]
 end
