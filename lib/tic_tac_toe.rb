@@ -44,4 +44,6 @@ def turn(board)
     converted = player_input
   end
 
+  move(board, position, player_token)
+  display_board(board)
 end
