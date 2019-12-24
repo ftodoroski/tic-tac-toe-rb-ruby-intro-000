@@ -49,3 +49,12 @@ def turn(board)
   move(board, converted, player_token)
   display_board(board)
 end
+
+def turn_count(board)
+    count = 0
+    board.each do |pos|
+        count += 1 if pos != " "
+    end
+
+    return count
+end
