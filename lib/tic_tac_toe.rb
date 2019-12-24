@@ -37,6 +37,7 @@ def turn(board)
   puts "Please choose a position 1-9:"
   user_input = gets.strip
   converted = input_to_index(user_input)
+  player_token = "X"
 
   until valid_move?(board, converted)
     puts "Please choose a position 1-9:"
