@@ -69,3 +69,7 @@ def won?(board)
 
     false
 end
+
+def full?(board)
+    board.none? { |pos| pos == " " }
+end
