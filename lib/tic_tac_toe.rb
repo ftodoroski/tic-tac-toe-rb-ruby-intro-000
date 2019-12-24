@@ -33,5 +33,4 @@ def valid_move?(board, position)
   return true if position.between?(1, 9) && !position_taken?(board, position)
 
   false
-  
 end
