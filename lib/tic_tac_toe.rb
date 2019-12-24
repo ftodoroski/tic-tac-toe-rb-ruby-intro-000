@@ -25,7 +25,7 @@ def move(board, position, player_token)
   board[position] = player_token
 end
 
-# Is the position occupied by a token 
+# Is the position occupied by a token
 def position_taken?(board, position)
   !(board[position] == " ")
 end
@@ -43,7 +43,7 @@ def turn(board)
   until valid_move?(board, converted)
     puts "Please choose a position 1-9:"
     player_input = gets.strip
-    converted = player_input
+    converted = input_to_index(player_input)
   end
 
   move(board, converted, player_token)
