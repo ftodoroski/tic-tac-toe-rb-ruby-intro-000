@@ -52,9 +52,7 @@ end
 
 def turn_count(board)
     count = 0
-    board.each do |pos|
-        count += 1 if pos != " "
-    end
+    board.each { |pos| count += 1 if pos != " " }
 
     return count
 end
