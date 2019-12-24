@@ -25,6 +25,7 @@ def move(board, position, player_token)
   board[position] = player_token
 end
 
+# Is the position occupied by a token 
 def position_taken?(board, position)
   !(board[position] == " ")
 end
