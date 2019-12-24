@@ -99,7 +99,11 @@ end
 def play(board)
     until over?(board)
         turn(board)
+    end
 
-
+    if winner(board) == nil
+        puts "Cat's Game!"
+    else
+        puts "Congratulations #{winner(board)}"
     end
 end
