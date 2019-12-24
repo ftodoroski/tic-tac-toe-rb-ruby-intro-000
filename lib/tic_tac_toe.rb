@@ -34,11 +34,19 @@ def valid_move?(board, position)
   position.between?(0, 8) && !position_taken?(board, position)
 end
 
+def turn_count(board)
+    board.count { |pos| pos != " " }
+end
+
+def current_player(board)
+    turn_count(board).even? ? "X" : "O"
+end
+
 def turn(board)
   puts "Please choose a position 1-9:"
   user_input = gets.strip
   converted = input_to_index(user_input)
-  player_token = "X"
+  player_token = current_player
 
   until valid_move?(board, converted)
     puts "Please choose a position 1-9:"
@@ -48,14 +56,6 @@ def turn(board)
 
   move(board, converted, player_token)
   display_board(board)
-end
-
-def turn_count(board)
-    board.count { |pos| pos != " " }
-end
-
-def current_player(board)
-    turn_count(board).even? ? "X" : "O"
 end
 
 def won?(board)
