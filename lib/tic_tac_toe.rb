@@ -36,5 +36,6 @@ end
 def turn(board)
   puts "Please choose a position 1-9:"
   user_input = gets.strip
+  converted = input_to_index(user_input)
 
 end
