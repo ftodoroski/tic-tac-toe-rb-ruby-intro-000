@@ -95,5 +95,7 @@ end
 def winner(board)
     return nil if draw?(board)
 
-    board[won?(board)[0]]
+
+    winn_combo = won?(board)
+    board[winn_combo[0]]
 end
