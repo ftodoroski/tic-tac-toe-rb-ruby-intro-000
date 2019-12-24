@@ -35,5 +35,6 @@ end
 
 def turn(board)
   puts "Please choose a position 1-9:"
+  user_input = gets.strip
 
 end
