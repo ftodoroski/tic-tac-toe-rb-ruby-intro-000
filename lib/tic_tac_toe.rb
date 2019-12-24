@@ -84,6 +84,14 @@ def draw?(board)
     end
 end
 
+def over?(board)
+    if won?(board) || full?(board) || draw?(board)
+        return true
+    else
+        false
+    end
+end
+
 def winner(board)
     draw?(board) ? nil : board[won?(board)[0]]
 
