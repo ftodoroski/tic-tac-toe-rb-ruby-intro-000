@@ -59,11 +59,11 @@ def current_player(board)
 end
 
 def won?(board)
-    WIN_COMBINATIONS.each do |winning_combination|
-        if board[winning_combination[0]] == "X" && board[winning_combination[1]] == "X" && board[winning_combination[2]] == "X"
-            return winning_combination
-        elsif board[winning_combination[0]] == "O" && board[winning_combination[1]] == "O" && board[winning_combination[2]] == "O"
-            return winning_combination
+    WIN_COMBINATIONS.each do |winn_combo|
+        if board[winn_combo[0]] == "X" && board[winn_combo[1]] == "X" && board[winn_combo[2]] == "X"
+            return winn_combo
+        elsif board[winn_combo[0]] == "O" && board[winn_combo[1]] == "O" && board[winn_combo[2]] == "O"
+            return winn_combo
         end
     end
 
